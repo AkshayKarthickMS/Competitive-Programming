@@ -3,32 +3,18 @@ class Solution {
         // code here
         List<String> list = new ArrayList<>();
         
-        int i = 0;
-        int j = s.length()-1;
+        int len = s.length();
+        int mid = len / 2;
         
-        if (j==0){
-            list.add(s);
-            return list;
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < len; i++){
+            int idx = (mid + i) % len;
+            sb.append(s.charAt(idx));
+            list.add(sb.toString());
         }
         
-        int k = j / 2;
-        int stop = k;
-        String temp = "";
-        
-        
-        
-        while (i != stop){
-            if (k<=j){
-                temp = temp + s.charAt(k);
-                list.add(temp);
-                k++;
-            }
-            else{
-                temp = temp + s.charAt(i);
-                list.add(temp);
-                i++;
-            }
-        }
+
         return list;
     }
 }
