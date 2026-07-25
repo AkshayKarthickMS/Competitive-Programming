@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// can be more optimal using java string builder, which omits inner loop
+
 class GFG {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
