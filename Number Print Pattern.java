@@ -3,15 +3,12 @@ class Solution {
         // write code here
         ArrayList<Integer> list = new ArrayList<>();
         
-        int temp = n;
         for (int i = n; i > 0; i--){
-            temp = n;
             for (int j = n; j > 0; j--){
-                for (int k = i; k > 0; k--){
-                    list.add(temp);
+                for (int k = 0; k < i; k++){
+                    list.add(j);
 
                 }
-                temp--;
             }
             list.add(-1);
         }
