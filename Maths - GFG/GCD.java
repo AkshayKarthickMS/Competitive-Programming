@@ -1,10 +1,8 @@
 class Solution {
     public static int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+        if (b == 0) {
+            return a;
         }
-        return a;
+        return gcd(b, a % b);
     }
 }
